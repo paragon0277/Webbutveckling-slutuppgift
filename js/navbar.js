@@ -1,12 +1,12 @@
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("navmyDropdown").classList.toggle("show");
 }
 
 window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
+  if (!e.target.matches('.navdropbtn')) {
+  var navmyDropdown = document.getElementById("navmyDropdown");
+    if (navmyDropdown.classList.contains('show')) {
+      navmyDropdown.classList.remove('show');
     }
   }
 }
