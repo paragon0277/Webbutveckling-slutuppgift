@@ -1,4 +1,4 @@
-function myFunction() {
+function navFunction() {
   document.getElementById("navmyDropdown").classList.toggle("show");
 }
 
