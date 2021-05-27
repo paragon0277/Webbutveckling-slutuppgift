@@ -58,13 +58,27 @@ nav{
             color: black;
         }
         
+        body {
+            background-color: darkblue;
+        }
+        
+        .bodyalign {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .imgsize {
+            width: 700px;
+        }
+        
         .cost {
             color: red;
             font-size: 30px;
         }
         
         .block {
-            border: solid;
+            border: solid white;
+            background-color: lightblue;
             width: 750px;
             display: flex;
             align-items: center;
@@ -86,26 +100,36 @@ nav{
             padding-bottom: 60px;
         }
         
+        .previewblock {
+            margin-top: 25px;
+            border: solid lightgrey;
+            height: 400px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+        }
+        
 </style>
 </head>
 <body>
-<h2>Hover on the below dropdown button in navbar to open dropdown menu</h2>
 <nav>
-<a class="links" href="#">Om oss</a>
-<a class="links" href="#">hjälp</a>
-<a class="links" href="#">Kontakt</a>
+<a class="links" href="omoss.html">Om oss</a>
+<a class="links" href="support.html">hjälp</a>
+<a class="links" href="kontakt.html">Kontakt</a>
 <div class="dropdown-menu">
-<button class="menu-btn">Sök <</button>
+<button class="menu-btn">Resor</button>
 <div class="menu-content">
-<a class="links-hidden" href="#">länder</a>
-<a class="links-hidden" href="#">Hotell</a>
+<a class="links-hidden" href="countries/sök.html">länder</a>
+<a class="links-hidden" href="hotels/sök.html">Hotell</a>
 </div>
 </div>
 </nav>
-   <div>
+<div class="bodyalign">
+   <div class="previewblock">
     <div class="block">
         <div class="text">
-            <p class="cost">10 998 SEK</p> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.</p>
+            <p class="cost">10 998 SEK</p>
+            <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.</p>
     </div>
     <div class="imgblock">
         <img src="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" alt="Image">
@@ -140,7 +164,8 @@ nav{
    <br>
        <div class="block">
         <div class="text">
-            <p class="cost">10 998 SEK</p> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.</p>
+            <p class="cost">10 998 SEK</p> 
+            <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.</p>
     </div>
     <div class="imgblock">
         <img src="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" alt="Image">
@@ -175,7 +200,8 @@ nav{
    <br>
        <div class="block">
         <div class="text">
-            <p class="cost">10 998 SEK</p> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.</p>
+            <p class="cost">10 998 SEK</p> 
+            <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.</p>
     </div>
     <div class="imgblock">
         <img src="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" alt="Image">
@@ -207,6 +233,8 @@ nav{
 </table>
     </div>
     </div>
+   </div>
+   <img class="imgsize" src="https://static01.nyt.com/images/2021/02/26/travel/26United-plane-explainer1/26United-plane-explainer1-mediumSquareAt3X.jpg">
    </div>
 </body>
 </html>
