@@ -193,6 +193,286 @@ nav{
       padding-bottom: 10px;
    }
    
+   .unordered { list-style-type: square; } .nested-ul { list-style-type: circle; }
+
+.unordered {
+
+line-height: 170%;
+
+}
+
+.unordered {
+
+background: #AF0CFF;
+
+padding: 20px;
+
+width: 30%;
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.unordered li {
+
+background: #D888FF;
+
+margin: 5px;
+
+}
+
+.nested-ul li {
+
+background: #EECBFF;
+
+margin: 5px;
+
+}
+
+.ordered {
+
+background: #FD8A00;
+
+padding: 20px;
+
+width: 20%;
+
+font-family: 'Brush Script MT', cursive;
+
+font-size: 1.3em;
+
+}
+
+.ordered li {
+
+background: #FFCF95;
+
+padding: 5px;
+
+margin-left: 20px;
+
+}
+
+.custom-box-list {
+
+margin: 0;
+
+padding: 0;
+
+list-style-type: none;
+
+}
+
+.custom-box-list li {
+
+counter-increment: step-counter;
+
+margin-bottom: 10px;
+
+}
+
+.custom-box-list li::before {
+
+content: counter(step-counter);
+
+margin-right: 5px;
+
+font-size: 80%;
+
+background-color: rgb(0, 200, 200);
+
+color: white;
+
+font-weight: bold;
+
+padding: 3px 8px;
+
+border-radius: 3px;
+
+}
+
+
+
+.list-image {
+
+list-style: none;
+
+padding-left: 0;
+
+}
+
+.list-image li {
+
+position: relative;
+
+padding-left: 30px;
+
+line-height: 170%;
+
+}
+
+.list-image li:before {
+  
+color: red;
+
+content: '';
+
+width: 20px;
+
+height: 20px;
+
+position: absolute;
+
+background-image: url("a.png");
+
+background-size: cover;
+
+background-position: center;
+
+left: 0;
+
+top: 50%;
+
+transform: translateY(-50%);
+
+}
+
+
+table, th,td {
+
+border: 1px solid black;
+
+border-collapse: collapse;
+
+}
+
+th,td {
+
+padding: 5px;
+
+text-align: center;
+
+}
+
+caption {
+
+caption-side: top;
+
+text-align: center;
+
+font-style: italic;
+
+font-weight: bold;
+
+color: grey;
+
+}
+
+.table-simple th {
+
+background-color: black;
+
+color: white;
+
+}
+
+.table-simple tr:nth-child(even) {
+
+background-color: white;
+
+}
+
+.table-simple tr:nth-child(odd) {
+
+background-color: red;
+
+}
+
+.table-simple tr:hover {
+
+background-color: orange;
+
+}
+
+ .head-body-foot thead {
+
+color: purple;
+
+background-color: rgb(203, 236, 213);
+
+}
+
+.head-body-foot tbody {
+
+color: rgb(222, 212, 182);
+
+font-weight: bold;
+
+background-color: rgb(68, 139, 127);
+
+}
+
+.head-body-foot tfoot {
+
+color: rgb(5, 4, 0);
+
+background-color: rgb(127, 131, 233);
+
+font-weight:bold ;
+
+}
+
+ .head-body-foot thead:hover {
+
+background-color: red;
+   
+} 
+
+.head-body-foot tbody:hover {
+
+background-color: orange;
+  
+}
+
+.head-body-foot tfoot:hover {
+
+background-color: yellow;
+
+}
+
+.scroll-bar {
+  
+  width: 60%;
+  overflow-x: scroll;
+  
+}
+
+.table-image {
+
+margin: 0 auto;
+
+}
+
+table.GeneratedTable {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #ffcc00;
+  border-style: solid;
+  color: #000000;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 2px;
+  border-color: #ffcc00;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.GeneratedTable thead {
+  background-color: #ffcc00;
+   }
 
 </style>
 </head>
@@ -211,3 +491,18 @@ nav{
 </div>
 </div>
 </nav>
+   <div class="div-content">
+
+<img class="mySlides" src="images/grek1.jpg" style="width:100%">
+
+<img class="mySlides" src="images/grek2.jpg" style="width:100%">
+      
+<img class="mySlides" src="images/grek3.jpg" style="width:100%">
+
+<button class="slider-button display-left" onclick="changeImage(-1)">&#11164;</button>
+
+<button class="slider-button display-right" onclick="changeImage(1)">&#11166;</button>
+
+</div>
+   </body>
+   </html>
