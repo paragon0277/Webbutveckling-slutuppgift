@@ -1,129 +1,225 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Slideshow Images</title>
-    <style>
-      .slider {
-        width: 500px;
-        height: 300px;
-        background-color: yellow;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0px;
-        text-align: center;
-        overflow: hidden;
-      }
-      .image-container {
-        width: 1500px;
-        background-color: pink;
-        height: 300px;
-        clear: both;
-        position: relative;
-        -webkit-transition: left 2s;
-        -moz-transition: left 2s;
-        -o-transition: left 2s;
-        transition: left 2s;
-      }
-      .slide {
-        float: left;
-        margin: 0px;
-        padding: 0px;
-        position: relative;
-      }
-      #slide-1:target ~ .image-container {
-        left: 0px;
-      }
-      #slide-2:target ~ .image-container {
-        left: -500px;
-      }
-      #slide-3:target ~ .image-container {
-        left: -1000px;
-      }
-      .buttons {
-        position: relative;
-        top: -20px;
-      }
-      .buttons a {
-        display: inline-block;
-        height: 15px;
-        width: 15px;
-        border-radius: 50px;
-        background-color: lightgreen;
-      }
-       
-       .menu-btn {
-   background-color: grey;
-   color: blue;
-   padding: 16px;
-   font-size: 20px;
-   font-weight: bolder;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   border: none;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
 }
-.dropdown-menu {
-   position: relative;
-   display: inline-block;
+
+* {
+  box-sizing: border-box;
 }
-.menu-content {
-   display: none;
-   position: absolute;
-   background-color: lightblue;
-   min-width: 160px;
-   z-index: 1;
+
+img {
+  vertical-align: middle;
 }
-nav{
-   background-color: gray;
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
 }
-.links,.links-hidden{
-   display: inline-block;
-   color: rgb(255, 255, 255);
-   padding: 12px 16px;
-   text-decoration: none;
-   font-size: 18px;
-   font-weight: bold;
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
-.links-hidden{
-   display: block;
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
-.links{
-   display: inline-block;
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.links-hidden:hover,.links:hover {
-   background-color: rgb(8, 107, 46);
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-.dropdown-menu:hover .menu-content {
-   display: block;
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.dropdown-menu:hover .menu-btn {
-   background-color: lightblue;
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
-    </style>
-  </head>
-  <body>
-     <nav>
-<a class="links" href="index.html">Start</a>
-<a class="links" href="omoss.html">Om oss</a>
-<a class="links" href="support.html">hjälp</a>
-<a class="links" href="kontakt.html">Kontakt</a>
-<div class="dropdown-menu">
-<button class="menu-btn">Resor</button>
-<div class="menu-content">
-<a class="links-hidden" href="countries\search.html">länder</a>
-<a class="links-hidden" href="hotels\search.html">Hotell</a>
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img_woods_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img_5terre_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img_mountains_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img_lights_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
 </div>
-</div>
-</nav>
-    <div class="slider">
-      <span id="slide-1"></span>
-      <span id="slide-2"></span>
-      <span id="slide-3"></span>
-      <div class="image-container">
-        <img src="images/egyp1.jpg" alt="" class="slide" width="500" height="300" />
-        <img src="/uploads/media/default/0001/03/b7d624354d5fa22e38b0ab1f9b905fb08ccc6a05.jpeg" class="slide" width="500" height="300" />
-        <img src="/uploads/media/default/0001/03/5bfad15a7fd24d448a48605baf52655a5bbe5a71.jpeg" class="slide" width="500" height="300" />
-      </div>
-      <div class="buttons">
-        <a href="#slide-1"></a>
-        <a href="#slide-2"></a>
-        <a href="#slide-3"></a>
-      </div>
+
+  <div style="display: flex; flex-direction: row;">
+    <p style="width=50%">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <table style="width:30%; background-color: lightgrey;">
+<tbody style= "width: 10%">
+<tr>
+<td>&nbsp;Rum</td>
+<td>:</td>
+<td>1&nbsp;2</td>
+</tr>
+<tr>
+<td>&nbsp;Pool</td>
+<td>:</td>
+<td>&nbsp;Ja</td>
+</tr>
+<tr>
+<td>&nbsp;Dist. Stad</td>
+<td>:</td>
+<td>&nbsp;1 Km</td>
+</tr>
+<tr style="width=20%">
+<td>&nbsp;Dist. Strand</td>
+<td>:</td>
+<td>&nbsp;0.2 Km</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
