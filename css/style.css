@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #fff;
   line-height: 1.9;
   color: #8c8c8c;
   position: relative; }
@@ -69,12 +68,12 @@ a {
   border-radius: 30px !important; }
   .btn.btn-primary {
     border-radius: 30px;
-    background: #ef4339;
-    color: #fff;
+    background: blue;
+    color: white;
     -webkit-box-shadow: 0 15px 30px 0 rgba(239, 67, 57, 0.2);
     box-shadow: 0 15px 30px 0 rgba(239, 67, 57, 0.2); }
   .btn:hover {
-    color: #fff; }
+    color: lightblue; }
   .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none;
