@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-.menu-btn {
+.navbar-menu-btn {
    background-color: grey !important;
    color: blue !important;
    padding: 16px !important;
@@ -17,11 +17,11 @@
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
    border: none !important;
 }
-.dropdown-menu {
+.navbar-dropdown-menu {
    position: relative !important;
    display: inline-block !important;
 }
-.menu-content {
+.navbar-menu-content {
    display: none !important;
    position: absolute !important;
    background-color: lightblue !important;
@@ -31,7 +31,7 @@
 nav{
    background-color: gray !important;
 }
-.links,.links-hidden{
+.navbar-links,.navbar-links-hidden{
    display: inline-block !important;
    color: rgb(255, 255, 255) !important;
    padding: 12px 16px !important;
@@ -39,34 +39,34 @@ nav{
    font-size: 18px !important;
    font-weight: bold !important;
 }
-.links-hidden{
+.navbar-links-hidden{
    display: block !important;
 }
-.links{
+.navbar-links{
    display: inline-block !important;
 }
-.links-hidden:hover,.links:hover {
+.navbar-links-hidden:hover,.navbar-links:hover {
    background-color: rgb(8, 107, 46) !important;
 }
 .dropdown-menu:hover .menu-content {
    display: block !important;
 }
-.dropdown-menu:hover .menu-btn {
+.navbar-dropdown-menu:hover .navbar-menu-btn {
    background-color: lightblue !important;
 }
     </style>
   </head>
   <body>
   <nav>
-<a class="links" href="index.html">Start</a>
-<a class="links" href="omoss.html">Om oss</a>
-<a class="links" href="support.html">hjälp</a>
-<a class="links" href="kontakt.html">Kontakt</a>
-<div class="dropdown-menu">
-<button class="menu-btn">Resor</button>
-<div class="menu-content">
-<a class="links-hidden" href="countries\search.html">länder</a>
-<a class="links-hidden" href="hotels\search.html">Hotell</a>
+<a class="navbar-links" href="index.html">Start</a>
+<a class="navbar-links" href="omoss.html">Om oss</a>
+<a class="navbar-links" href="support.html">hjälp</a>
+<a class="navbar-links" href="kontakt.html">Kontakt</a>
+<div class="navbar-dropdown-menu">
+<button class="navbar-menu-btn">Resor</button>
+<div class="navbar-menu-content">
+<a class="navbar-links-hidden" href="countries\search.html">länder</a>
+<a class="navbar-links-hidden" href="hotels\search.html">Hotell</a>
 </div>
 </div>
 </nav>
