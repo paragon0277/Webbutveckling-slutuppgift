@@ -194,7 +194,8 @@ nav{
    }
    
    .scrollbar {
-   style="height:400px;
+      height:400px;
+      width=200%;
       border:solid 2px grey;
       overflow:scroll;
       overflow-x:hidden;
@@ -218,7 +219,23 @@ nav{
 </div>
 </div>
 </nav>
-
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Sök här</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="countries/italien">Italien</a>
+    <a href="countries/thailand.html">Thailand</a>
+    <a href="countries/kanarieöarna.html">kanarieöarna</a>
+    <a href="countries/spanien.html">Spanien</a>
+    <a href="countries/kroatien.html">Kroatien</a>
+    <a href="countries/albanien.html">Albanien</a>
+    <a href="countries/grekland.html">Grekland</a>
+    <a href="countries/usa.html">USA</a>
+    <a href="countries/storbrittanien.html">Storbrittanien</a>
+    <a href="countries/.html"></a>
+    <a href="countries/.html"></a>
+  </div>
+</div>
 <div class="scrollbar">
 <div style="display: flex; flex-direction:row;">
 <div style="height=400px; overflow-y=scroll;">
@@ -252,7 +269,7 @@ nav{
 </table>
 
     
-    <img style="padding-left=20%" src="https://bilder.apollo.se/grekland-1556024959-119706-ImageGalleryLightbox.jpg">
+    <img style="padding-left=20%" src="images/grek1.jpg">
 </div>
 </div>
 </div>
@@ -289,7 +306,7 @@ nav{
 </table>
 
     
-    <img style="padding-left=20%" src="images/grek4.jpg">
+    <img style="padding-left=20%" src="images/grek4.jpg" alt="Aquarium Hotel">
 </div>
 </div>
 </div>
@@ -326,7 +343,7 @@ nav{
 </table>
 
     
-    <img style="padding-left=20%" src="https://bilder.apollo.se/grekland-1556024959-119706-ImageGalleryLightbox.jpg">
+    <img style="padding-left=20%" src="images/ital1.jpg" alt="">
 </div>
 </div>
 </div>
